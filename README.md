@@ -66,6 +66,14 @@ Data transfer priority parameters:
 
 The client *.dll*  reads all the options from the registry, the values can be found under the following key:
 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Terminal Server Client\Default\AddIns\UDVC-Plugin`
+
+### 使用
+1. vs2015编译，管理员注册regsvr32.exe UDVC-Plugin.dll
+2. 运行注册表.reg
+3. mstsc连接
+4. 服务端运行UDVC-Server.exe
+5. 服务端运行UDVC-SockClient recv
+6. 客户端运行UDVC-SockClient send
   
 Every time the module is enabled and before the connection is made a reminder warning is showed. Just like this:
 ![warning](https://github.com/earthquake/UniversalDVC/blob/master/wiki/warning.png?raw=true)
